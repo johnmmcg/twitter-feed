@@ -1,0 +1,57 @@
+@import 'stylesheets/colors';
+@import 'stylesheets/TwitterFeed';
+@import 'stylesheets/Tweet';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  background-color: #99B2B7;
+}
+
+
+.tweet {
+  margin: 20px;
+  padding: 20px;
+  border-style: solid;
+  border: 10;
+  border-color: #D9CEB2;
+  background-color: #D5DED9;
+  border-radius: 20px;
+}
+
+.tweetInfo {
+  color: #7A6A53;
+  margin: 5px;
+  em: 10px;
+}
+
+.tweetActions {
+  margin-top: 15px;
+}
+
+
+i {
+  margin: 10px;
+}
+
+.userImg {
+  height: auto;
+  width: auto;
+  border: solid;
+  border-color: #99B2B7;
+  border-radius: 20%;
+}
+
+h3 {
+  font-family: 'Fugaz One', cursive;
+}
+
+p {
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tweetMedia {
+  border-radius: 2%;
+  margin: auto;
+}
