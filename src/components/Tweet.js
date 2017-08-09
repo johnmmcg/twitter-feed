@@ -6,6 +6,7 @@ const Tweet = (props) => {
   let userImg = props.user.profile_image_url;
   let entities = props.entities;
   let tweetMedia = null;
+  let displayURL = null;
   let tweetDate = new Date(Number(props.time));
   let tweetDay= tweetDate.getDate();
   var monthNames = ["January", "February", "March", "April", "May", "June",
@@ -26,11 +27,17 @@ const Tweet = (props) => {
   if (isEmpty(props.entities)) {
     tweetMedia = null
   } else {
-    tweetMedia = props.entities.media[0].media_url
+    tweetMedia = props.entities.media[0].media_url;
+    displayURL = props.entities.media[0].display_url;
   }
-;
 
-  let text = props.text
+  let text = props.text;
+
+if (text.includes(displayURL)) {
+  text = text.replace(displayURL, '');
+  debugger;
+}
+
   // debugger;
 
   let replyAlert = (event) => {
